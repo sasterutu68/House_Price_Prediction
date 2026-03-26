@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enquiries</title>
+</head>
+<body>
+    <h2>Contact Enquiries</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            {% for h in headers %}
+                <th>{{ h }}</th>
+            {% endfor %}
+        </tr>
+
+        {% for row in tables %}
+        <tr>
+            {% for h in headers %}
+                <td>{{ row[h] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
